@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carta Generada</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f7e6ff; padding: 20px; }
+        .container { background: white; padding: 30px; border-radius: 8px; max-width: 700px; margin: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h2 { color: #8e44ad; }
+        .carta-box { border: 1px solid #ccc; padding: 20px; white-space: pre-wrap; margin-top: 15px; background-color: #f9f9f9; text-align: left; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🎉 ¡Carta Generada con Éxito, {{ nombre_user }}!</h2>
+        <div class="carta-box">
+            <p>{{ carta|safe }}</p> 
+        </div>
+        <a href="/saludo/">Generar otra carta</a>
+    </div>
+</body>
+</html>

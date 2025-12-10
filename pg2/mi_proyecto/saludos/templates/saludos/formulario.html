@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generador de Carta</title>
+    <style>
+        body { font-family: sans-serif; background-color: #e6f7ff; padding: 20px; }
+        .container { background: white; padding: 25px; border-radius: 8px; max-width: 500px; margin: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h2 { color: #007bff; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input[type="text"] { width: 95%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🛠️ Crea tu Carta de Presentación</h2>
+        <form method="post">
+            {% csrf_token %} 
+            
+            <label for="nombre">Tu Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="carrera">Carrera o Puesto al que Aspiras:</label>
+            <input type="text" id="carrera" name="carrera" required>
+            
+            <button type="submit">Generar Carta</button>
+        </form>
+    </div>
+</body>
+</html>
